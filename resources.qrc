@@ -1,0 +1,13 @@
+<RCC>
+  <qresource prefix="Icons">
+    <file>images/bg3.jpg</file>
+  </qresource>
+  <qresource prefix="Images">
+    <file>images/bg4.jpg</file>
+    <file>images/bg3.jpg</file>
+    <file>images/bg2.jpg</file>
+    <file>images/bg.jpg</file>
+    <file>images/bg.avif</file>
+    <file>images/devmozay.png</file>
+  </qresource>
+</RCC>

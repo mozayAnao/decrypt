@@ -1,6 +1,6 @@
 import hashlib
 import pyperclip
-
+import resources
 from Crypto.Util import Padding
 from PyQt5 import uic, QtWidgets
 from PyQt5.QtWidgets import *
@@ -16,7 +16,6 @@ class MyGUI(QMainWindow):
         # Connect the GUI signals to the corresponding slots
         self.file_button.clicked.connect(self.select_file)
         self.encrypt_button.clicked.connect(self.encrypt_file)
-        self.encrypted_file_button.clicked.connect(self.select_encrypted_file)
         self.decrypt_button.clicked.connect(self.decrypt_file)
         self.copy_md5_button.clicked.connect(lambda: self.copy_md5())
         self.copy_sha_button.clicked.connect(lambda: self.copy_sha())
@@ -88,7 +87,7 @@ class MyGUI(QMainWindow):
 
     def decrypt_file(self):
         key = self.key_entry.text()
-        filepath = self.encrypted_file_entry.text()
+        filepath = self.file_entry.text()
 
         # Check that the key and file have been specified
         if not key:
